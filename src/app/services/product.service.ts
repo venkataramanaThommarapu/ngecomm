@@ -11,18 +11,18 @@ export class ProductService {
 
   all() {
     //return this.http.get(environment.api + "/items")      // javascript way of code
-    return this.http.get(`${environment.api}/items`) //type script way
+    return this.http.get(`${environment.api}/products`) //type script way
   }
 
   create(payload: any) {
-    return this.http.post(`${environment.api}/items`, payload)
+    return this.http.post(`${environment.api}/products`, payload)
   }
 
   singleProduct(id: any) {
-    return this.http.get(`${environment.api}/items/${id}`)
+    return this.http.get(`${environment.api}/products/${id}`)
   }
 
   update(payload: any, id: any) {
-    return this.http.put(`${environment.api}/items/${id}`, payload)
+    return this.http.put(`${environment.api}/products/${id}`, payload)
   }
 }
